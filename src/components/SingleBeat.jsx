@@ -10,5 +10,5 @@ function SingleBeat(){
     </div>
   );
 }
-
+//make a loop so that you have 4 sounds per single beat, different sounds
 export default SingleBeat;

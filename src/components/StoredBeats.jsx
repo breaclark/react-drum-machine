@@ -1,11 +1,12 @@
 import React from "react";
+import SingleStoredBeat from "./SingleStoredBeat"
 
 function StoredBeats(){
   return (
     <div>
-      <h1>StoredBeats Goes Here</h1>
+      <SingleStoredBeat />
     </div>
   );
 }
-
+//put in a loop here to make some more of them
 export default StoredBeats;

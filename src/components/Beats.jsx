@@ -8,5 +8,5 @@ function Beats(){
     </div>
   );
 }
-
+//loop through here to make 16 beats
 export default Beats;
