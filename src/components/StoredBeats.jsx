@@ -32,10 +32,15 @@ function StoredBeats(){
         .beat-box {
           background-color: #6d6d6d;
           border-radius: 5px;
-          width: 520px;
+          padding: 4px;
+          width: 510px;
         }
 
         @media screen and (max-width: 580px) {
+          .beat-box {
+            margin-top: -24px;
+          }
+
           .stored-beats {
             margin-top: 190px;
           }
