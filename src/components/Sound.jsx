@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Sound(){
+function Sound(props){
   return (
     <div>
-      <h5>Sound goes here</h5>
+      <h5>{props.sound}</h5>
     </div>
   );
 }
-// Put in props to pass down the sound
+
 export default Sound;

@@ -2,7 +2,7 @@ import React from 'react';
 import SingleBeat from './SingleBeat';
 
 function Beats(){
-  const availableProduce = [
+  const beats = [
   {
     beatNumber: 1,
     sounds: [
@@ -151,9 +151,13 @@ function Beats(){
 
   return (
     <div>
-      <SingleBeat />
+      {beats.map((beatObject, index) =>
+        <SingleBeat beatNumber={beatObject.beatNumber}
+          sounds={beatObject.sounds}
+          key={index}/>
+      )}
     </div>
   );
 }
-//loop through here to make 16 beats
+
 export default Beats;

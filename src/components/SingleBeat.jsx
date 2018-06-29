@@ -1,14 +1,18 @@
 import React from 'react';
 import BeatNumber from './BeatNumber';
 import Sound from './Sound';
+import PropTypes from 'prop-types';
 
-function SingleBeat(){
+function SingleBeat(props){
   return (
     <div>
-      <BeatNumber />
-      <Sound />
+      <BeatNumber number={props.beatNumber}/>
+        {props.sounds.map((soundObject, index) =>
+          <Sound sound={soundObject}
+            key={index}/>
+        )}
     </div>
   );
 }
-//make a loop so that you have 4 sounds per single beat, different sounds
+
 export default SingleBeat;

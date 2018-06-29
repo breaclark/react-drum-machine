@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function BeatNumber(){
+function BeatNumber(props){
   return (
     <div>
-      <h5>1</h5>
+      <h5>{props.number}</h5>
     </div>
   );
 }
-// Put in props to pass down the number
+
 export default BeatNumber;
