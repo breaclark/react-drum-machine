@@ -6,7 +6,7 @@
 
 ### Component Structure
 
-
+<img src="https://raw.githubusercontent.com/breaclark/react-drum-machine/master/IMG_2584.JPG">
 
 ### To install dependencies run this:
 
