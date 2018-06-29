@@ -35,8 +35,13 @@ function DrumKits(){
   return (
     <div className="drum-kits">
       <style jsx>{`
+          .drum-kits {
+            margin-top: -34px;
+          }
+
           p {
             margin-left: 24px;
+            margin-bottom: 6px;
           }
 
           .kit-block {

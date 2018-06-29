@@ -5,8 +5,17 @@ function SaveSettings(){
     <div className="save-settings">
       <style jsx>{`
         .save-settings {
-          display: inline;
+          display: flex;
         }
+
+        .save-settings input {
+          font-size: 16px;
+          height: 22px;
+          margin-top: 8px;
+          margin-right: 4px;
+          margin-left: 4px;
+        }
+
         .save-settings button{
           background-color: #bfad37;
           border: none;
