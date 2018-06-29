@@ -6,6 +6,9 @@ function StoredBeats(){
     <div className="stored-beats">
       <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" />
       <style jsx>{`
+        .stored-beats {
+          margin-top: 350px;
+        }
         .stored-beats h3{
           font-family: 'Oleo Script', cursive;
           font-size: 32px;

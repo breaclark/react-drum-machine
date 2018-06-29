@@ -153,14 +153,54 @@ function Beats(){
     <div className="beats">
       <style jsx>{`
         .beats {
+          height: 600px;
+          position: absolute;
+        }
+
+        .instruments h5{
+          background-color: #6d6d6d;
+          border-radius: 5px;
+          height: 12px;
+          padding: 20px;
+          position: absolute;
+          width: 900px;
+          z-index: -1;
+        }
+
+        .instruments .kick {
+          top: 38px;
+        }
+
+        .instruments .snare {
+          top: 111px;
+        }
+
+        .instruments .hho {
+          top: 184px;
+        }
+
+        .instruments .hhc {
+          top: 257px;
+        }
+
+        .beat-block {
           display: flex;
+          margin-left: 130px;
         }
       `}</style>
-      {beats.map((beatObject, index) =>
-        <SingleBeat beatNumber={beatObject.beatNumber}
-          sounds={beatObject.sounds}
-          key={index}/>
-      )}
+      <div className="instruments">
+        <h5 className="kick">Kick</h5>
+        <h5 className="snare">Snare</h5>
+        <h5 className="hho">Hi-Hat (open)</h5>
+        <h5 className="hhc">Hi-Hat (closed)</h5>
+      </div>
+      <div className="beat-block">
+        {beats.map((beatObject, index) =>
+          <SingleBeat beatNumber={beatObject.beatNumber}
+            sounds={beatObject.sounds}
+            key={index}/>
+        )}
+      </div>
     </div>
   );
 }
