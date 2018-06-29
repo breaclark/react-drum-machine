@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Settings from "./Settings";
-import Beat from "./Beat";
+import Beats from "./Beats";
 import StoredBeats from "./StoredBeats";
 
 function App(){
@@ -19,7 +19,7 @@ function App(){
       `}</style>
       <Header />
       <Settings />
-      <Beat />
+      <Beats />
       <StoredBeats />
     </div>
   );
