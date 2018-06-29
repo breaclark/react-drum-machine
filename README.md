@@ -1,10 +1,20 @@
-## To install dependencies run this:
+# React Drum Machine
+
+## A react recreation of an angular app I previously made (https://drum-mach.firebaseapp.com/).
+
+#### By Brea Clark
+
+### Component Structure
+
+
+
+### To install dependencies run this:
 
 run `npm install`
 run `npm run start`
 open http://localhost:8080/ in browser
 
-## Commands that were used to make this template:
+### Commands that were used to make this template:
 
 Adds proper syntax highlighting to JSX:
 `apm install react@0.16.2`
