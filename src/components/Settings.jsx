@@ -12,6 +12,7 @@ function Settings(){
       <style jsx>{`
         .settings {
           display: flex;
+          align-items: center;
         }
       `}</style>
       <DrumKits />

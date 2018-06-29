@@ -35,6 +35,10 @@ function DrumKits(){
   return (
     <div className="drum-kits">
       <style jsx>{`
+          p {
+            margin-left: 24px;
+          }
+
           .kit-block {
             align-items: center;
             display: flex;
