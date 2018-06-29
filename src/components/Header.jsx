@@ -8,6 +8,7 @@ function Header(){
         .header h1 {
           font-family: 'Oleo Script', cursive;
           font-size: 60px;
+          margin: 10px;
         }
       `}</style>
       <h1>React Drum Machine Clone</h1>

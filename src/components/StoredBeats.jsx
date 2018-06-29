@@ -35,6 +35,7 @@ function StoredBeats(){
           width: 500px;
         }
       `}</style>
+      <p>Developed by Brea Borlas using AngularJS as a clone of the website http://drums.dojosto.com/ developed by Doug Johnston</p>
       <h3>Stored Beats</h3>
       <div className="beat-box">
         {storedBeats.map((storedBeat, index) =>
@@ -45,5 +46,5 @@ function StoredBeats(){
     </div>
   );
 }
-//put in a loop here to make some more of them
+
 export default StoredBeats;
