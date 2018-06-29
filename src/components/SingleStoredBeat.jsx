@@ -25,6 +25,21 @@ function SingleStoredBeat(props){
           margin-top: 10px;
           margin-left: 10px;
         }
+
+        @media screen and (max-width: 580px) {
+          .single-stored-beat button {
+            font-size: 12px;
+            height: 18px;
+            padding: 2px 10px;
+            margin: 2px;
+            width: 44px;
+          }
+
+          .single-stored-beat h4 {
+            font-size: 12px;
+            margin-top: 6px;
+          }
+        }
       `}</style>
       <button>Load</button>
       <h4>{props.beatName}</h4>

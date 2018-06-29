@@ -32,7 +32,13 @@ function StoredBeats(){
         .beat-box {
           background-color: #6d6d6d;
           border-radius: 5px;
-          width: 500px;
+          width: 520px;
+        }
+
+        @media screen and (max-width: 580px) {
+          .stored-beats {
+            margin-top: 190px;
+          }
         }
       `}</style>
       <p>Developed by Brea Borlas using AngularJS as a clone of the website http://drums.dojosto.com/ developed by Doug Johnston</p>
