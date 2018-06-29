@@ -49,6 +49,12 @@ function DrumKits(){
             display: flex;
             margin-top: 0px;
           }
+
+          @media screen and (max-width: 580px) {
+            p {
+              font-size: 10px;
+            }
+          }
       `}</style>
       <p>Drum Kit</p>
       <div className="kit-block">

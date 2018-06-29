@@ -24,6 +24,22 @@ function SingleKit(props){
           .single-kit p {
             display: none;
           }
+
+          @media screen and (max-width: 580px) {
+            .single-kit {
+              height: 20px;
+              margin: 2px;
+              margin-top: 0px;
+              position: relative;
+              width: 20px;
+            }
+
+            .single-kit h3 {
+              font-size: 10px;
+              top: -6px;
+              right: 8px;
+            }
+          }
       `}</style>
       <h3>{props.kitName}</h3>
       {props.sounds.map((soundObject, index) =>
