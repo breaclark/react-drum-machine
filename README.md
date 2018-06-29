@@ -11,6 +11,7 @@
 ### Notes & Struggles
 
 * "Controls" is apparently a special word, and if you use it in your file name for a component, react will refuse to recognize it
+* The correct place to import google fonts is somewhat unclear to me. I imported it in one component and was able to use it in another without re importing it.
 
 ### Differences between Angular and React
 
