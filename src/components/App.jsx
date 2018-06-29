@@ -1,8 +1,8 @@
-import React from "react";
-import Header from "./Header";
-import Settings from "./Settings";
-import Beats from "./Beats";
-import StoredBeats from "./StoredBeats";
+import React from 'react';
+import Header from './Header';
+import Settings from './Settings';
+import Beats from './Beats';
+import StoredBeats from './StoredBeats';
 
 function App(){
   return (

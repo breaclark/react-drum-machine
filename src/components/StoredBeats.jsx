@@ -1,5 +1,5 @@
-import React from "react";
-import SingleStoredBeat from "./SingleStoredBeat"
+import React from 'react';
+import SingleStoredBeat from './SingleStoredBeat';
 
 function StoredBeats(){
   return (
