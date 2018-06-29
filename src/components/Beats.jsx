@@ -163,7 +163,7 @@ function Beats(){
           height: 12px;
           padding: 20px;
           position: absolute;
-          width: 900px;
+          width: 862px;
           z-index: -1;
         }
 
