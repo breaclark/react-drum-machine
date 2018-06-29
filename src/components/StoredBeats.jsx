@@ -3,7 +3,13 @@ import SingleStoredBeat from './SingleStoredBeat';
 
 function StoredBeats(){
   return (
-    <div>
+    <div className="stored-beats">
+      <style jsx>{`
+        .stored-beats h3{
+          font-family: 'Lobster', cursive;
+        }
+      `}</style>
+      <h3>Stored Beat</h3>
       <SingleStoredBeat />
     </div>
   );
