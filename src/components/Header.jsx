@@ -6,7 +6,6 @@ function Header(){
       <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" />
       <style jsx>{`
         .header h1 {
-          color: white;
           font-family: 'Lobster', cursive;
         }
       `}</style>

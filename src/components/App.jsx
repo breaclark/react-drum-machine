@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import Controls from "./Controls";
+import Settings from "./Settings";
 import Beat from "./Beat";
 import StoredBeats from "./StoredBeats";
 
@@ -14,10 +14,11 @@ function App(){
         }
         * {
           font-family: 'Ubuntu Mono', monospace;
+          color: white;
         }
       `}</style>
       <Header />
-      <Controls />
+      <Settings />
       <Beat />
       <StoredBeats />
     </div>

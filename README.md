@@ -10,6 +10,8 @@
 
 ### Notes & Struggles
 
+* "Controls" is apparently a special word, and if you use it in your file name for a component, react will refuse to recognize it
+
 ### Differences between Angular and React
 
 ### To install dependencies run this:
