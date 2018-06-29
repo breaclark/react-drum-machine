@@ -8,7 +8,12 @@ import SpeedSlider from './SpeedSlider';
 
 function Settings(){
   return (
-    <div>
+    <div className="settings">
+      <style jsx>{`
+        .settings {
+          display: flex;
+        }
+      `}</style>
       <DrumKits />
       <SaveSettings />
       <Play />

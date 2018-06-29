@@ -15,6 +15,8 @@
 
 ### Differences between Angular and React
 
+* I organized the sounds differently and it seems DRY-er in react
+
 ### To install dependencies run this:
 
 run `npm install`
