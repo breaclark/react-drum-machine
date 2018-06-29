@@ -14,6 +14,15 @@ function Play(){
           margin: 4px;
           width: 80px;
         }
+
+        @media screen and (max-width: 580px) {
+          .play button{
+            font-size: 12px;
+            padding: 8px 0px;
+            margin: 2px;
+            width: 40px;
+          }
+        }
       `}</style>
       <button>Play</button>
     </div>

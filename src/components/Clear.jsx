@@ -14,6 +14,15 @@ function Clear(){
           margin: 4px;
           width: 80px;
         }
+
+        @media screen and (max-width: 580px) {
+          .clear button{
+            font-size: 12px;
+            padding: 8px 0px;
+            margin: 2px;
+            width: 40px;
+          }
+        }
       `}</style>
       <button>Clear</button>
     </div>
