@@ -10,6 +10,12 @@ function Header(){
           font-size: 60px;
           margin: 10px;
         }
+
+        @media screen and (max-width: 580px) {
+          .header h1 {
+            font-size: 34px;
+          }
+        }
       `}</style>
       <h1>React Drum Machine Clone</h1>
     </div>
