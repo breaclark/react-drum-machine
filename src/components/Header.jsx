@@ -3,14 +3,14 @@ import React from 'react';
 function Header(){
   return (
     <div className="header">
-      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" />
       <style jsx>{`
         .header h1 {
-          font-family: 'Lobster', cursive;
+          font-family: 'Oleo Script', cursive;
+          font-size: 60px;
         }
       `}</style>
       <h1>React Drum Machine Clone</h1>
-      <p>Test text</p>
     </div>
   );
 }

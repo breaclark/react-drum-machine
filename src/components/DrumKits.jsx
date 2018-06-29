@@ -33,12 +33,22 @@ function DrumKits(){
 ];
 
   return (
-    <div>
-      {kits.map((soundObject, index) =>
-        <SingleKit kitName={soundObject.kitName}
-          sounds={soundObject.sounds}
-          key={index}/>
-      )}
+    <div className="drum-kits">
+      <style jsx>{`
+          .kit-block {
+            align-items: center;
+            display: flex;
+            margin-top: 0px;
+          }
+      `}</style>
+      <p>Drum Kit</p>
+      <div className="kit-block">
+        {kits.map((soundObject, index) =>
+          <SingleKit kitName={soundObject.kitName}
+            sounds={soundObject.sounds}
+            key={index}/>
+        )}
+      </div>
     </div>
   );
 }

@@ -9,7 +9,6 @@ import SpeedSlider from './SpeedSlider';
 function Settings(){
   return (
     <div>
-      <p>Drum Kit</p>
       <DrumKits />
       <SaveSettings />
       <Play />
