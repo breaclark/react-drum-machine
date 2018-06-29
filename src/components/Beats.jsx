@@ -150,7 +150,12 @@ function Beats(){
 ];
 
   return (
-    <div>
+    <div className="beats">
+      <style jsx>{`
+        .beats {
+          display: flex;
+        }
+      `}</style>
       {beats.map((beatObject, index) =>
         <SingleBeat beatNumber={beatObject.beatNumber}
           sounds={beatObject.sounds}

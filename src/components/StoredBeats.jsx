@@ -4,12 +4,14 @@ import SingleStoredBeat from './SingleStoredBeat';
 function StoredBeats(){
   return (
     <div className="stored-beats">
+      <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" />
       <style jsx>{`
         .stored-beats h3{
-          font-family: 'Lobster', cursive;
+          font-family: 'Oleo Script', cursive;
+          font-size: 32px;
         }
       `}</style>
-      <h3>Stored Beat</h3>
+      <h3>Stored Beats</h3>
       <SingleStoredBeat />
     </div>
   );
