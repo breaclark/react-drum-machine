@@ -17,6 +17,16 @@ function Sound(props){
           h5 {
             display: none;
           }
+
+          @media screen and (max-width: 580px) {
+            .sound {
+              margin: 14px 4px;
+            }
+
+            img {
+              width: 20px;
+            }
+          }
       `}</style>
       <img src={soundButton} alt="button" />
       <h5>{props.sound}</h5>

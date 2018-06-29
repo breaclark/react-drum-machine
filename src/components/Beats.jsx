@@ -187,6 +187,44 @@ function Beats(){
           display: flex;
           margin-left: 130px;
         }
+
+        @media screen and (max-width: 580px) {
+          .beats {
+            height: 300px;
+          }
+
+          .instruments h5{
+            background-color: #6d6d6d;
+            border-radius: 5px;
+            font-size: 8px;
+            height: 10px;
+            padding: 10px;
+            position: absolute;
+            width: 500px;
+            z-index: -1;
+          }
+
+          .instruments .kick {
+            top: 25px;
+          }
+
+          .instruments .snare {
+            top: 62px;
+          }
+
+          .instruments .hho {
+            top: 99px;
+          }
+
+          .instruments .hhc {
+            top: 136px;
+          }
+
+          .beat-block {
+            display: flex;
+            margin-left: 68px;
+          }
+        }
       `}</style>
       <div className="instruments">
         <h5 className="kick">Kick</h5>
