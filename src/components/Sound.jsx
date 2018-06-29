@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import soundButton from './../assets/switch-off.png';
+import PropTypes from 'prop-types';
 
 function Sound(props){
   return (
@@ -23,5 +23,9 @@ function Sound(props){
     </div>
   );
 }
+
+Sound.propTypes = {
+  sound: PropTypes.string
+};
 
 export default Sound;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function SingleStoredBeat(props){
   return (
@@ -30,5 +31,9 @@ function SingleStoredBeat(props){
     </div>
   );
 }
+
+SingleStoredBeat.propTypes = {
+  beatName: PropTypes.string
+};
 
 export default SingleStoredBeat;

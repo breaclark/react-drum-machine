@@ -14,4 +14,8 @@ function BeatNumber(props){
   );
 }
 
+BeatNumber.propTypes = {
+  number: PropTypes.number
+};
+
 export default BeatNumber;

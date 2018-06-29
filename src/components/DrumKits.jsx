@@ -1,36 +1,36 @@
 import React from 'react';
-import SingleKit from "./SingleKit";
+import SingleKit from './SingleKit';
 
 function DrumKits(){
   const kits = [
-  {
-    kitName: "A",
-    sounds: [
-      "kick1.mp3",
-      "snare1.mp3",
-      "hho1.mp3",
-      "hhc1.mp3"
-    ]
-  },
-  {
-    kitName: "B",
-    sounds: [
-      "kick2.mp3",
-      "snare2.mp3",
-      "hho2.mp3",
-      "hhc2.mp3"
-    ]
-  },
-  {
-    kitName: "C",
-    sounds: [
-      "kick3.mp3",
-      "snare3.mp3",
-      "hho3.mp3",
-      "hhc3.mp3"
-    ]
-  }
-];
+    {
+      kitName: 'A',
+      sounds: [
+        'kick1.mp3',
+        'snare1.mp3',
+        'hho1.mp3',
+        'hhc1.mp3'
+      ]
+    },
+    {
+      kitName: 'B',
+      sounds: [
+        'kick2.mp3',
+        'snare2.mp3',
+        'hho2.mp3',
+        'hhc2.mp3'
+      ]
+    },
+    {
+      kitName: 'C',
+      sounds: [
+        'kick3.mp3',
+        'snare3.mp3',
+        'hho3.mp3',
+        'hhc3.mp3'
+      ]
+    }
+  ];
 
   return (
     <div className="drum-kits">

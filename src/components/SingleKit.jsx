@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function SingleKit(props){
   return (
@@ -31,5 +32,10 @@ function SingleKit(props){
     </div>
   );
 }
+
+SingleKit.propTypes = {
+  kitName: PropTypes.string,
+  sounds: PropTypes.array
+};
 
 export default SingleKit;

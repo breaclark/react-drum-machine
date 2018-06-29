@@ -7,12 +7,17 @@ function SingleBeat(props){
   return (
     <div>
       <BeatNumber number={props.beatNumber}/>
-        {props.sounds.map((soundObject, index) =>
-          <Sound sound={soundObject}
-            key={index}/>
-        )}
+      {props.sounds.map((soundObject, index) =>
+        <Sound sound={soundObject}
+          key={index}/>
+      )}
     </div>
   );
 }
+
+SingleBeat.propTypes = {
+  beatNumber: PropTypes.number,
+  sounds: PropTypes.array
+};
 
 export default SingleBeat;

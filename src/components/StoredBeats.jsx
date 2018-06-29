@@ -4,16 +4,16 @@ import SingleStoredBeat from './SingleStoredBeat';
 function StoredBeats(){
   const storedBeats = [
     {
-      beatName: "one two three four"
+      beatName: 'one two three four'
     },
     {
-      beatName: "test 2"
+      beatName: 'test 2'
     },
     {
-      beatName: "boom chh"
+      beatName: 'boom chh'
     },
     {
-      beatName: "Best song ever"
+      beatName: 'Best song ever'
     },
   ];
   return (
