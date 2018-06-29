@@ -1,5 +1,8 @@
 import React from "react";
 import Header from "./Header";
+import Controls from "./Controls";
+import Beat from "./Beat";
+import StoredBeats from "./StoredBeats";
 
 function App(){
   return (
@@ -14,6 +17,9 @@ function App(){
         }
       `}</style>
       <Header />
+      <Controls />
+      <Beat />
+      <StoredBeats />
     </div>
   );
 }
