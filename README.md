@@ -1,12 +1,16 @@
 # React Drum Machine
 
-## A react recreation of an angular app I previously made (https://drum-mach.firebaseapp.com/).
+### A react recreation of an angular app I previously made (https://drum-mach.firebaseapp.com/).
 
 #### By Brea Clark
 
 ### Component Structure
 
 <img src="https://raw.githubusercontent.com/breaclark/react-drum-machine/master/IMG_2584.JPG">
+
+### Notes & Struggles
+
+### Differences between Angular and React
 
 ### To install dependencies run this:
 
