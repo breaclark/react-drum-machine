@@ -14,7 +14,7 @@ function Sound(props){
   let audioRef = null;
 
   function onSoundClick() {
-    props.onSoundChange(props.beatNumber - 1, props.soundNumber);
+    props.onSoundChange(props.beatNumber - 1, props.soundNumber, audioRef);
     props.onPlaySound(audioRef);
   }
 

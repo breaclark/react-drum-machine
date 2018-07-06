@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Play(){
+function Play(props){
   return (
     <div className="play">
       <style jsx>{`
@@ -24,9 +25,13 @@ function Play(){
           }
         }
       `}</style>
-      <button>Play</button>
+    <button onClick={props.onPlayBeatPlay}>Play</button>
     </div>
   );
 }
+
+Play.propTypes = {
+  onPlayBeatPlay: PropTypes.func
+};
 
 export default Play;
