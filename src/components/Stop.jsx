@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Stop(){
+function Stop(props){
   return (
     <div className="stop">
       <style jsx>{`
@@ -24,9 +25,13 @@ function Stop(){
           }
         }
       `}</style>
-      <button>Stop</button>
+    <button onClick={props.onStopBeatStop}>Stop</button>
     </div>
   );
 }
+
+Stop.propTypes = {
+  onStopBeatStop: PropTypes.func
+};
 
 export default Stop;

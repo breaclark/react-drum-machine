@@ -19,7 +19,7 @@ function Settings(props){
       <DrumKits />
       <SaveSettings />
       <Play onPlayBeatPlay={props.onPlayBeat}/>
-      <Stop />
+      <Stop onStopBeatStop={props.onStopBeat}/>
       <Clear />
       <SpeedSlider />
     </div>
@@ -27,7 +27,8 @@ function Settings(props){
 }
 
 Settings.propTypes = {
-  onPlayBeat: PropTypes.func
+  onPlayBeat: PropTypes.func,
+  onStopBeat: PropTypes.func
 };
 
 export default Settings;

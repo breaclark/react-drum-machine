@@ -36,12 +36,12 @@ class App extends React.Component {
       stopPlaying: false
     };
     this.playBeat = this.playBeat.bind(this);
+    this.stopBeat = this.stopBeat.bind(this);
     this.manipulateSoundOnBeat = this.manipulateSoundOnBeat.bind(this);
     this.playSound = this.playSound.bind(this);
   }
 
   // saveBeat
-  // stopBeat
   // clearBeat
   // changeBeatSpeed
   // loadStoredBeat
@@ -74,7 +74,11 @@ class App extends React.Component {
     }
   }
 
-
+  stopBeat() {
+    this.setState({
+      stopPlaying: true
+    });
+  }
 
 
   manipulateSoundOnBeat (singleBeat, sound) {
@@ -111,7 +115,9 @@ class App extends React.Component {
           }
         `}</style>
         <Header />
-        <Settings onPlayBeat={this.playBeat}/>
+        <Settings
+          onPlayBeat={this.playBeat}
+          onStopBeat={this.stopBeat}/>
         <Beats
           beats={this.state.currentBeat}
           onBeatsChange={this.manipulateSoundOnBeat}
