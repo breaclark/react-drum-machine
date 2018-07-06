@@ -7,6 +7,7 @@
 ### Component Structure
 
 <img src="https://raw.githubusercontent.com/breaclark/react-drum-machine/master/IMG_2584.JPG">
+<img src="https://raw.githubusercontent.com/breaclark/react-drum-machine/master/new_diagram.jpg">
 
 ### Notes & Struggles
 
