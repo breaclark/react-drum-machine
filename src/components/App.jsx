@@ -47,7 +47,6 @@ class App extends React.Component {
   }
 
   loadStoredBeat(storedBeat) {
-    console.log('got here');
     this.setState({
       currentBeat: storedBeat
     });
@@ -172,7 +171,7 @@ class App extends React.Component {
           onBeatsChange={this.manipulateSoundOnBeat}
           onPlaySoundBeats={this.playSound}/>
         <StoredBeats
-          onLoadStoredBeat={this.state.loadStoredBeat}
+          onLoadStoredBeat={this.loadStoredBeat}
           storedBeats={this.state.storedBeatList}/>
       </div>
     );
