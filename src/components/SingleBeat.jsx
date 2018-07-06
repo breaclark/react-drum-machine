@@ -10,6 +10,8 @@ function SingleBeat(props){
       {props.sounds.map((soundObject, index) =>
         <Sound sound={soundObject.sound}
           on={soundObject.on}
+          beatNumber={props.beatNumber}
+          soundNumber={index}
           key={index}/>
       )}
     </div>
