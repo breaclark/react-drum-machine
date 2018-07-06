@@ -31,6 +31,7 @@ class App extends React.Component {
         [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}]],
       playing: false
     };
+    this.manipulateSoundOnBeat = this.manipulateSoundOnBeat.bind(this);
   }
 
   // saveBeat
@@ -43,9 +44,17 @@ class App extends React.Component {
   //
   // changeBeatSpeed
 
-  // addSoundToBeat (singleBeat, sound) {
-  //
-  // }
+  manipulateSoundOnBeat (singleBeat, sound) {
+    let newCurrentBeat = this.state.currentBeat.slice();
+    if (newCurrentBeat[singleBeat][sound]['on']) {
+      newCurrentBeat[singleBeat][sound]['on'] = false;
+    } else {
+      newCurrentBeat[singleBeat][sound]['on'] = true;
+    }
+    this.setState({
+      currentBeat: newCurrentBeat
+    });
+  }
 
   // loadStoredBeat
 
@@ -64,7 +73,7 @@ class App extends React.Component {
         `}</style>
         <Header />
         <Settings />
-        <Beats beats = {this.state.currentBeat}/>
+        <Beats beats = {this.state.currentBeat} onBeatsChange= {this.manipulateSoundOnBeat}/>
         <StoredBeats />
       </div>
     );

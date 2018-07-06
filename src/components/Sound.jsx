@@ -14,11 +14,9 @@ function Sound(props){
   let audioRef = null;
 
   function onSoundClick() {
+    props.onSoundChange(props.beatNumber - 1, props.soundNumber);
     audioRef.load();
     audioRef.play();
-    // let audioPlayer = <HTMLVideoElement> document.getElementById("sound" + "-" + this.childSingleBeatIndex + "-" + soundIndex);
-    // audioPlayer.load();
-    // audioPlayer.play();
   }
 
   return (
@@ -43,7 +41,7 @@ function Sound(props){
           }
       `}</style>
     <img onClick={onSoundClick} src={soundButton} alt="button" />
-      <audio ref={(audio) => {audioRef = audio}}>
+      <audio ref={(audio) => {audioRef = audio;}}>
         <source src={props.sound} type="audio/mpeg" />
             Your browser does not support the audio element.
       </audio>
@@ -52,7 +50,11 @@ function Sound(props){
 }
 
 Sound.propTypes = {
-  sound: PropTypes.string
+  on: PropTypes.bool,
+  sound: PropTypes.string,
+  beatNumber: PropTypes.number,
+  soundNumber: PropTypes.number,
+  onSoundChange: PropTypes.func
 };
 
 export default Sound;
