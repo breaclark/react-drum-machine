@@ -50,10 +50,9 @@ class App extends React.Component {
   saveBeat(beatName) {
     let newStoredBeatList = this.state.storedBeatList.slice();
     let newStoredBeat = {
-      'name' : beatName,
+      'beatName' : beatName,
       'beat' :  this.state.currentBeat
     };
-    console.log(newStoredBeat);
     newStoredBeatList.push(newStoredBeat);
     this.setState({
       storedBeatList: newStoredBeatList
@@ -165,7 +164,7 @@ class App extends React.Component {
           beats={this.state.currentBeat}
           onBeatsChange={this.manipulateSoundOnBeat}
           onPlaySoundBeats={this.playSound}/>
-        <StoredBeats />
+        <StoredBeats storedBeats={this.state.storedBeatList}/>
       </div>
     );
   }

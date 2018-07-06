@@ -1,21 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SingleStoredBeat from './SingleStoredBeat';
 
-function StoredBeats(){
-  const storedBeats = [
-    {
-      beatName: 'one two three four'
-    },
-    {
-      beatName: 'test 2'
-    },
-    {
-      beatName: 'boom chh'
-    },
-    {
-      beatName: 'Best song ever'
-    },
-  ];
+function StoredBeats(props){
   return (
     <div className="stored-beats">
       <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" />
@@ -49,7 +36,7 @@ function StoredBeats(){
       <p>Developed by Brea Clark using React as a clone of the website http://drums.dojosto.com/ developed by Doug Johnston</p>
       <h3>Stored Beats</h3>
       <div className="beat-box">
-        {storedBeats.map((storedBeat, index) =>
+        {props.storedBeats.map((storedBeat, index) =>
           <SingleStoredBeat beatName={storedBeat.beatName}
             key={index}/>
         )}
@@ -57,5 +44,9 @@ function StoredBeats(){
     </div>
   );
 }
+
+StoredBeats.propTypes = {
+  storedBeats: PropTypes.array
+};
 
 export default StoredBeats;

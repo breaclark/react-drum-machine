@@ -6,6 +6,7 @@ function SaveSettings(props){
   let beatName = null;
   function onSaveClick() {
     props.onSaveBeatSave(beatName.value);
+    beatName.value = '';
   }
 
   return (
