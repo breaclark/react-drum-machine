@@ -15,12 +15,15 @@
 * I used CSS Modules instead of CSS Objects as I've been using that throughout this week.
 * "Controls" is a special word, and if you use it in your file name for a component, react will refuse to recognize it.
 * The correct place to import google fonts is somewhat unclear to me. I imported it in one component and was able to use it in another without re importing it. Later it stopped working so I did have to reimport it.
-* How to make an audio element play its sound with React? Refs
+* Finding out how to play audio elements with react was difficult and I tried using refs
 * Are you able to make refs and assign them within nested components?
+* I ended up refactoring the way audio elements are played in general and not needing refs
 
 ### Differences between Angular and React
 
 * I organized the sounds differently and it seems DRY-er in react
+* Using refs in react to call html tags
+* Some functions I used in Angular were basically transferrable
 
 ### To install dependencies run this:
 
