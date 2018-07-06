@@ -60,6 +60,11 @@ class App extends React.Component {
     });
   }
 
+  playSound (audioRef) {
+    audioRef.load();
+    audioRef.play();
+  }
+
   // loadStoredBeat
 
   render () {
@@ -77,7 +82,10 @@ class App extends React.Component {
         `}</style>
         <Header />
         <Settings />
-        <Beats beats = {this.state.currentBeat} onBeatsChange= {this.manipulateSoundOnBeat}/>
+        <Beats
+          beats={this.state.currentBeat}
+          onBeatsChange={this.manipulateSoundOnBeat}
+          onPlaySoundBeats={this.playSound}/>
         <StoredBeats />
       </div>
     );

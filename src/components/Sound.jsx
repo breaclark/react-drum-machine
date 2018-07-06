@@ -15,8 +15,7 @@ function Sound(props){
 
   function onSoundClick() {
     props.onSoundChange(props.beatNumber - 1, props.soundNumber);
-    audioRef.load();
-    audioRef.play();
+    props.onPlaySound(audioRef);
   }
 
   return (
@@ -54,7 +53,8 @@ Sound.propTypes = {
   sound: PropTypes.string,
   beatNumber: PropTypes.number,
   soundNumber: PropTypes.number,
-  onSoundChange: PropTypes.func
+  onSoundChange: PropTypes.func,
+  onPlaySound: PropTypes.func
 };
 
 export default Sound;

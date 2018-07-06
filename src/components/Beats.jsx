@@ -90,7 +90,8 @@ function Beats(props){
       <div className="beat-block">
         {props.beats.map((beatObject, index) =>
           <SingleBeat
-            onSingleBeatChange = {props.onBeatsChange}
+            onPlaySoundSingleBeat={props.onPlaySoundBeats}
+            onSingleBeatChange={props.onBeatsChange}
             beatNumber={index + 1}
             sounds={beatObject}
             key={index}/>
@@ -102,7 +103,8 @@ function Beats(props){
 
 Beats.propTypes = {
   beats: PropTypes.array,
-  onBeatsChange : PropTypes.func
+  onBeatsChange: PropTypes.func,
+  onPlaySoundBeats: PropTypes.func
 };
 
 export default Beats;

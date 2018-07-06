@@ -9,6 +9,7 @@ function SingleBeat(props){
       <BeatNumber number={props.beatNumber}/>
       {props.sounds.map((soundObject, index) =>
         <Sound
+          onPlaySound={props.onPlaySoundSingleBeat}
           onSoundChange={props.onSingleBeatChange}
           sound={soundObject.sound}
           on={soundObject.on}
@@ -23,7 +24,8 @@ function SingleBeat(props){
 SingleBeat.propTypes = {
   beatNumber: PropTypes.number,
   sounds: PropTypes.array,
-  onSingleBeatChange: PropTypes.func
+  onSingleBeatChange: PropTypes.func,
+  onPlaySoundSingleBeat: PropTypes.func
 };
 
 export default SingleBeat;
