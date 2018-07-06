@@ -11,11 +11,9 @@ function Sound(props){
     soundButton = offSoundButton;
   }
 
-  let audioRef = null;
-
   function onSoundClick() {
-    props.onSoundChange(props.beatNumber - 1, props.soundNumber, audioRef);
-    props.onPlaySound(audioRef);
+    props.onSoundChange(props.beatNumber - 1, props.soundNumber);
+    props.onPlaySound(props.beatNumber - 1, props.soundNumber);
   }
 
   return (
@@ -40,7 +38,7 @@ function Sound(props){
           }
       `}</style>
       <img onClick={onSoundClick} src={soundButton} alt="button" />
-      <audio ref={(audio) => {audioRef = audio;}}>
+      <audio>
         <source src={props.sound} type="audio/mpeg" />
             Your browser does not support the audio element.
       </audio>

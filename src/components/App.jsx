@@ -13,22 +13,22 @@ class App extends React.Component {
     super(props);
     this.state = {
       currentBeat: [
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}],
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}],
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}],
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}],
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}],
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}],
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}],
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}],
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}],
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}],
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}],
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}],
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}],
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}],
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}],
-        [{'audioRef': null, 'sound': kick, 'on': false}, {'audioRef': null, 'sound': snare, 'on': false}, {'audioRef': null, 'sound': hho, 'on': false}, {'audioRef': null, 'sound': hhc, 'on': false}]
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+        [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}]
         ],
       playing: false
     };
@@ -56,20 +56,20 @@ class App extends React.Component {
   }
 
 
-  manipulateSoundOnBeat (singleBeat, sound, audioRef) {
+  manipulateSoundOnBeat (singleBeat, sound) {
     let newCurrentBeat = this.state.currentBeat.slice();
     if (newCurrentBeat[singleBeat][sound]['on']) {
       newCurrentBeat[singleBeat][sound]['on'] = false;
     } else {
       newCurrentBeat[singleBeat][sound]['on'] = true;
     }
-    newCurrentBeat[singleBeat][sound]['audioRef'] = audioRef;
     this.setState({
       currentBeat: newCurrentBeat
     });
   }
 
-  playSound (audioRef) {
+  playSound (singleBeat, sound) {
+    let audioRef = new Audio(this.state.currentBeat[singleBeat][sound]['sound']);
     audioRef.load();
     audioRef.play();
   }
