@@ -11,7 +11,6 @@ function SingleBeat(props){
         <Sound
           onPlaySound={props.onPlaySoundSingleBeat}
           onSoundChange={props.onSingleBeatChange}
-          sound={soundObject.sound}
           on={soundObject.on}
           beatNumber={props.beatNumber}
           soundNumber={index}

@@ -38,17 +38,12 @@ function Sound(props){
           }
       `}</style>
       <img onClick={onSoundClick} src={soundButton} alt="button" />
-      <audio>
-        <source src={props.sound} type="audio/mpeg" />
-            Your browser does not support the audio element.
-      </audio>
     </div>
   );
 }
 
 Sound.propTypes = {
   on: PropTypes.bool,
-  sound: PropTypes.string,
   beatNumber: PropTypes.number,
   soundNumber: PropTypes.number,
   onSoundChange: PropTypes.func,

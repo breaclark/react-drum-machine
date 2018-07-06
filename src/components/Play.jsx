@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Play(props){
+
+  function onPlayClick () {
+    props.onPlayBeatPlay(0);
+  }
   return (
     <div className="play">
       <style jsx>{`
@@ -25,7 +29,7 @@ function Play(props){
           }
         }
       `}</style>
-    <button onClick={props.onPlayBeatPlay}>Play</button>
+      <button onClick={onPlayClick}>Play</button>
     </div>
   );
 }

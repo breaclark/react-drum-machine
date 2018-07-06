@@ -29,8 +29,11 @@ class App extends React.Component {
         [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
         [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
         [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}]
-        ],
-      playing: false
+      ],
+      playing: false,
+      currentlyPlayingBeat: 0,
+      currentlyPlaying: false,
+      stopPlaying: false
     };
     this.playBeat = this.playBeat.bind(this);
     this.manipulateSoundOnBeat = this.manipulateSoundOnBeat.bind(this);
@@ -43,17 +46,31 @@ class App extends React.Component {
   // changeBeatSpeed
   // loadStoredBeat
 
-  playBeat () {
-    for (let i=0; i<3; i++) {
-      let singleBeat = this.state.currentBeat[i];
-      singleBeat.forEach((soundObject) => {
-        let soundPlay = new Audio(soundObject.sound);
-        if (soundObject.on) {
-          soundPlay.play();
+  playBeat(i) {
+    this.currentlyPlayingBeat = i + 1;
+    this.currentlyPlaying = true;
+    if(i < this.state.currentBeat.length && this.stopPlaying === false) {
+      for(let j=0; j<this.state.currentBeat[i].length; j++) {
+        if (this.state.currentBeat[i][j].on) {
+          let soundPlay = new Audio(this.state.currentBeat[i][j].sound);
+          if (this.state.currentBeat[i][j].on) {
+            soundPlay.play();
+          }
         }
-      });
+      }
+      i = i + 1;
+      setTimeout(() => {
+        this.playBeat(i);
+      }, (300)); //60000/this.bpmSlider
+    } else if (i === this.state.currentBeat.length && this.stopPlaying === false) {
+      this.playBeat(0);
+    } else {
+      this.currentlyPlaying = false;
+      this.stopPlaying = false;
     }
   }
+
+
 
 
   manipulateSoundOnBeat (singleBeat, sound) {
