@@ -6,7 +6,13 @@ function BeatNumber(props){
     <div className="beat-number">
       <style jsx>{`
         .beat-number {
-          margin-left: 20px;
+          margin-left: 10px;
+          ${ props.number === props.currentlyPlayingBeat ?
+            `background-color: #149356;
+            border-radius: 4px;
+            padding: 0px 9px;
+            width: 14px;` : ''
+          }
         }
 
         @media screen and (max-width: 580px) {
@@ -25,7 +31,8 @@ function BeatNumber(props){
 }
 
 BeatNumber.propTypes = {
-  number: PropTypes.number
+  number: PropTypes.number,
+  currentlyPlayingBeat: PropTypes.number
 };
 
 export default BeatNumber;

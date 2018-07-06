@@ -6,7 +6,9 @@ import PropTypes from 'prop-types';
 function SingleBeat(props){
   return (
     <div>
-      <BeatNumber number={props.beatNumber}/>
+      <BeatNumber
+        currentlyPlayingBeat={props.currentlyPlayingBeat}
+        number={props.beatNumber}/>
       {props.sounds.map((soundObject, index) =>
         <Sound
           onPlaySound={props.onPlaySoundSingleBeat}

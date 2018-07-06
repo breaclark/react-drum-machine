@@ -71,7 +71,7 @@ class App extends React.Component {
       i = i + 1;
       setTimeout(() => {
         this.playBeat(i);
-      }, (60000/this.state.currentSpeed)); 
+      }, (60000/this.state.currentSpeed));
     } else if (i === this.state.currentBeat.length && this.state.stopPlaying === false) {
       this.playBeat(0);
     } else {
@@ -150,6 +150,7 @@ class App extends React.Component {
           onChangeBeatSpeed={this.changeBeatSpeed}
           settingsCurrentSpeed={this.state.currentSpeed}/>
         <Beats
+          currentlyPlayingBeat={this.state.currentlyPlayingBeat}
           beats={this.state.currentBeat}
           onBeatsChange={this.manipulateSoundOnBeat}
           onPlaySoundBeats={this.playSound}/>
