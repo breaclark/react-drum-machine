@@ -25,7 +25,7 @@ function Stop(props){
           }
         }
       `}</style>
-    <button onClick={props.onStopBeatStop}>Stop</button>
+      <button onClick={props.onStopBeatStop}>Stop</button>
     </div>
   );
 }

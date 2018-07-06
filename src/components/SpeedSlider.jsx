@@ -1,6 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function SpeedSlider(){
+function SpeedSlider(props){
+  let sliderValue = null;
+
+  function onSpeedSliderChange() {
+    props.onChangeBeatSpeedSlider(parseInt(sliderValue.value));
+  }
+
   return (
     <div className="speed-slider">
       <style jsx>{`
@@ -18,10 +25,17 @@ function SpeedSlider(){
           }
         }
       `}</style>
-      <input type="range" min="60" max="500" value="180" />
-      <p>180 bpm</p>
+      <input type="range" min="60" max="500" value={props.sliderCurrentSpeed}
+        ref={(input) => {sliderValue = input;}}
+        onChange={onSpeedSliderChange}/>
+      <p>{props.sliderCurrentSpeed} bpm</p>
     </div>
   );
 }
+
+SpeedSlider.propTypes = {
+  sliderCurrentSpeed: PropTypes.number,
+  onChangeBeatSpeedSlider: PropTypes.func
+};
 
 export default SpeedSlider;

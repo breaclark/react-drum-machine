@@ -21,12 +21,16 @@ function Settings(props){
       <Play onPlayBeatPlay={props.onPlayBeat}/>
       <Stop onStopBeatStop={props.onStopBeat}/>
       <Clear onClearBeatClear={props.onClearBeat}/>
-      <SpeedSlider />
+      <SpeedSlider
+        onChangeBeatSpeedSlider={props.onChangeBeatSpeed}
+        sliderCurrentSpeed={props.settingsCurrentSpeed}/>
     </div>
   );
 }
 
 Settings.propTypes = {
+  settingsCurrentSpeed: PropTypes.number,
+  onChangeBeatSpeed: PropTypes.func,
   onPlayBeat: PropTypes.func,
   onStopBeat: PropTypes.func,
   onClearBeat: PropTypes.func
