@@ -28,6 +28,8 @@ function Sound(props){
             }
           }
       `}</style>
+      {/* This image should change based on if sound is on or off
+      Also it should make a sound when pressed */}
       <img src={soundButton} alt="button" />
       <h5>{props.sound}</h5>
     </div>

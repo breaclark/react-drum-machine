@@ -12,7 +12,24 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentBeat: [];
+      currentBeat: [
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}],
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}],
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}],
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}],
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}],
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}],
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}],
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}],
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}],
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}],
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}],
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}],
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}],
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}],
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}],
+        [{"sound": kick, "on": false}, {"sound": snare, "on": false}, {"sound": hho, "on": false}, {"sound": hhc, "on": false}]
+      ];
       playing: false;
     };
   }
@@ -48,7 +65,7 @@ class App extends React.Component {
         `}</style>
         <Header />
         <Settings />
-        <Beats />
+        <Beats this.state.currentBeat = {beats}/>
         <StoredBeats />
       </div>
     );
