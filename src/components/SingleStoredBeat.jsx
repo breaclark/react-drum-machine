@@ -2,6 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function SingleStoredBeat(props){
+
+  function onLoadClick() {
+    props.onLoadStoredBeatList(props.beat);
+  }
+
   return (
     <div className="single-stored-beat">
       <style jsx>{`
@@ -41,14 +46,16 @@ function SingleStoredBeat(props){
           }
         }
       `}</style>
-      <button>Load</button>
+      <button onClick={onLoadClick}>Load</button>
       <h4>{props.beatName}</h4>
     </div>
   );
 }
 
 SingleStoredBeat.propTypes = {
-  beatName: PropTypes.string
+  beatName: PropTypes.string,
+  beat: PropTypes.array,
+  onLoadStoredBeatList: PropTypes.func
 };
 
 export default SingleStoredBeat;

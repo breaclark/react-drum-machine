@@ -10,9 +10,9 @@ function BeatNumber(props){
           padding: 0px 9px;
           width: 14px;
           ${ props.number === props.currentlyPlayingBeat ?
-            `background-color: #149356;
+      `background-color: #149356;
             border-radius: 4px;` : ''
-          }
+    }
         }
 
         @media screen and (max-width: 580px) {

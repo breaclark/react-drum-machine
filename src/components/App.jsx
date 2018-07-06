@@ -36,6 +36,7 @@ class App extends React.Component {
       currentSpeed: 180,
       storedBeatList: []
     };
+    this.loadStoredBeat = this.loadStoredBeat.bind(this);
     this.saveBeat = this.saveBeat.bind(this);
     this.changeBeatSpeed = this.changeBeatSpeed.bind(this);
     this.playBeat = this.playBeat.bind(this);
@@ -45,7 +46,12 @@ class App extends React.Component {
     this.playSound = this.playSound.bind(this);
   }
 
-  // loadStoredBeat
+  loadStoredBeat(storedBeat) {
+    console.log('got here');
+    this.setState({
+      currentBeat: storedBeat
+    });
+  }
 
   saveBeat(beatName) {
     let newStoredBeatList = this.state.storedBeatList.slice();
@@ -165,7 +171,9 @@ class App extends React.Component {
           beats={this.state.currentBeat}
           onBeatsChange={this.manipulateSoundOnBeat}
           onPlaySoundBeats={this.playSound}/>
-        <StoredBeats storedBeats={this.state.storedBeatList}/>
+        <StoredBeats
+          onLoadStoredBeat={this.state.loadStoredBeat}
+          storedBeats={this.state.storedBeatList}/>
       </div>
     );
   }

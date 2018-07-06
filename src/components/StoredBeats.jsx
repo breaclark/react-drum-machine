@@ -37,7 +37,10 @@ function StoredBeats(props){
       <h3>Stored Beats</h3>
       <div className="beat-box">
         {props.storedBeats.map((storedBeat, index) =>
-          <SingleStoredBeat beatName={storedBeat.beatName}
+          <SingleStoredBeat
+            onLoadStoredBeatList={props.onLoadStoredBeat}
+            beatName={storedBeat.beatName}
+            beat={storedBeat.beat}
             key={index}/>
         )}
       </div>
@@ -46,7 +49,8 @@ function StoredBeats(props){
 }
 
 StoredBeats.propTypes = {
-  storedBeats: PropTypes.array
+  storedBeats: PropTypes.array,
+  onLoadStoredBeat: PropTypes.func
 };
 
 export default StoredBeats;

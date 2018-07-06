@@ -8,7 +8,6 @@ function Beats(props){
     <div className="beats">
       <style jsx>{`
         .beats {
-          height: 600px;
           position: absolute;
         }
 
