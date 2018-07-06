@@ -47,16 +47,18 @@ class App extends React.Component {
   }
 
   loadStoredBeat(storedBeat) {
+    let storedBeatCopy = storedBeat.slice();
     this.setState({
-      currentBeat: storedBeat
+      currentBeat: storedBeatCopy
     });
   }
 
   saveBeat(beatName) {
     let newStoredBeatList = this.state.storedBeatList.slice();
+    let currentBeatCopy = this.state.currentBeat.slice();
     let newStoredBeat = {
       'beatName' : beatName,
-      'beat' :  this.state.currentBeat
+      'beat' :  currentBeatCopy
     };
     newStoredBeatList.push(newStoredBeat);
     this.setState({
@@ -127,6 +129,7 @@ class App extends React.Component {
   }
 
   manipulateSoundOnBeat (singleBeat, sound) {
+    console.log(this.state.storedBeatList);
     let newCurrentBeat = this.state.currentBeat.slice();
     if (newCurrentBeat[singleBeat][sound]['on']) {
       newCurrentBeat[singleBeat][sound]['on'] = false;
