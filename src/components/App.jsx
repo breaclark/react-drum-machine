@@ -31,13 +31,17 @@ class App extends React.Component {
         [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}]],
       playing: false
     };
+    this.playBeat = this.playBeat.bind(this);
     this.manipulateSoundOnBeat = this.manipulateSoundOnBeat.bind(this);
   }
 
   // saveBeat
   //
-  // playBeat
-  //
+  playBeat () {
+    //this will need to play the refs from down at sound level
+    //might need to make that a method up here that is triggered at that level?
+  }
+
   // stopBeat
   //
   // clearBeat

@@ -40,7 +40,7 @@ function Sound(props){
             }
           }
       `}</style>
-    <img onClick={onSoundClick} src={soundButton} alt="button" />
+      <img onClick={onSoundClick} src={soundButton} alt="button" />
       <audio ref={(audio) => {audioRef = audio;}}>
         <source src={props.sound} type="audio/mpeg" />
             Your browser does not support the audio element.
