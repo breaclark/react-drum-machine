@@ -14,10 +14,6 @@ function Sound(props){
             width: 40px;
           }
 
-          h5 {
-            display: none;
-          }
-
           @media screen and (max-width: 580px) {
             .sound {
               margin: 14px 4px;
@@ -31,7 +27,10 @@ function Sound(props){
       {/* This image should change based on if sound is on or off
       Also it should make a sound when pressed */}
       <img src={soundButton} alt="button" />
-      <h5>{props.sound}</h5>
+      <audio>
+        <source src={props.sound} type="audio/mpeg" />
+            Your browser does not support the audio element.
+      </audio>
     </div>
   );
 }

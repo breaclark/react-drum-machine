@@ -42,6 +42,11 @@ module.exports = {
         }
       },
       {
+        test: /\.mp3$/,
+        exclude: /node_modules/,
+        loader: 'file-loader'
+      },
+      {
         test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
