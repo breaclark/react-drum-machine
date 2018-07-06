@@ -57,6 +57,7 @@ class App extends React.Component {
     this.setState({
       storedBeatList: newStoredBeatList
     });
+    this.clearBeat();
   }
 
   changeBeatSpeed(newSpeed) {
