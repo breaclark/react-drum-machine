@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Clear(){
+function Clear(props){
   return (
     <div className="clear">
       <style jsx>{`
@@ -24,9 +25,13 @@ function Clear(){
           }
         }
       `}</style>
-      <button>Clear</button>
+      <button onClick={props.onClearBeatClear}>Clear</button>
     </div>
   );
 }
+
+Clear.propTypes = {
+  onClearBeatClear: PropTypes.func
+};
 
 export default Clear;

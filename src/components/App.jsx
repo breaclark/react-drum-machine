@@ -37,6 +37,7 @@ class App extends React.Component {
     };
     this.playBeat = this.playBeat.bind(this);
     this.stopBeat = this.stopBeat.bind(this);
+    this.clearBeat = this.clearBeat.bind(this);
     this.manipulateSoundOnBeat = this.manipulateSoundOnBeat.bind(this);
     this.playSound = this.playSound.bind(this);
   }
@@ -80,6 +81,26 @@ class App extends React.Component {
     });
   }
 
+  clearBeat() {
+    this.setState({
+      currentBeat: [[{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+      [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+      [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+      [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+      [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+      [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+      [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+      [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+      [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+      [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+      [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+      [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+      [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+      [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+      [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}],
+      [{'sound': kick, 'on': false}, {'sound': snare, 'on': false}, {'sound': hho, 'on': false}, {'sound': hhc, 'on': false}]]
+    });
+  }
 
   manipulateSoundOnBeat (singleBeat, sound) {
     let newCurrentBeat = this.state.currentBeat.slice();
@@ -117,7 +138,8 @@ class App extends React.Component {
         <Header />
         <Settings
           onPlayBeat={this.playBeat}
-          onStopBeat={this.stopBeat}/>
+          onStopBeat={this.stopBeat}
+          onClearBeat={this.clearBeat}/>
         <Beats
           beats={this.state.currentBeat}
           onBeatsChange={this.manipulateSoundOnBeat}

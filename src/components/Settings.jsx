@@ -20,7 +20,7 @@ function Settings(props){
       <SaveSettings />
       <Play onPlayBeatPlay={props.onPlayBeat}/>
       <Stop onStopBeatStop={props.onStopBeat}/>
-      <Clear />
+      <Clear onClearBeatClear={props.onClearBeat}/>
       <SpeedSlider />
     </div>
   );
@@ -28,7 +28,8 @@ function Settings(props){
 
 Settings.propTypes = {
   onPlayBeat: PropTypes.func,
-  onStopBeat: PropTypes.func
+  onStopBeat: PropTypes.func,
+  onClearBeat: PropTypes.func
 };
 
 export default Settings;
