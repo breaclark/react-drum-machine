@@ -47,9 +47,11 @@ class App extends React.Component {
   // loadStoredBeat
 
   playBeat(i) {
-    this.currentlyPlayingBeat = i + 1;
-    this.currentlyPlaying = true;
-    if(i < this.state.currentBeat.length && this.stopPlaying === false) {
+    this.setState({
+      currentlyPlayingBeat: i + 1,
+      currentlyPlaying: true
+    });
+    if(i < this.state.currentBeat.length && this.state.stopPlaying === false) {
       for(let j=0; j<this.state.currentBeat[i].length; j++) {
         if (this.state.currentBeat[i][j].on) {
           let soundPlay = new Audio(this.state.currentBeat[i][j].sound);
@@ -62,11 +64,13 @@ class App extends React.Component {
       setTimeout(() => {
         this.playBeat(i);
       }, (300)); //60000/this.bpmSlider
-    } else if (i === this.state.currentBeat.length && this.stopPlaying === false) {
+    } else if (i === this.state.currentBeat.length && this.state.stopPlaying === false) {
       this.playBeat(0);
     } else {
-      this.currentlyPlaying = false;
-      this.stopPlaying = false;
+      this.setState({
+        currentlyPlaying: false,
+        stopPlaying: false
+      });
     }
   }
 
