@@ -3,11 +3,35 @@ import Header from './Header';
 import Settings from './Settings';
 import Beats from './Beats';
 import StoredBeats from './StoredBeats';
+import kick from './../asssets/kick.mp3';
+import snare from './../asssets/snare.mp3';
+import hho from './../asssets/high-hat-open.mp3';
+import hhc from './../asssets/high-hat-closed.mp3';
 
 class App extends React.Component {
   constructor(props) {
-    
+    super(props);
+    this.state = {
+      currentBeat: [];
+      playing: false;
+    };
   }
+
+  // saveBeat
+  //
+  // playBeat
+  //
+  // stopBeat
+  //
+  // clearBeat
+  //
+  // changeBeatSpeed
+
+  addSoundToBeat (singleBeat, sound) {
+
+  }
+
+  // loadStoredBeat
 
   render () {
     return (
