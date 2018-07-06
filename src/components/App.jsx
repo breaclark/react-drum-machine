@@ -33,8 +33,10 @@ class App extends React.Component {
       currentlyPlayingBeat: 0,
       currentlyPlaying: false,
       stopPlaying: false,
-      currentSpeed: 180
+      currentSpeed: 180,
+      storedBeatList: []
     };
+    this.saveBeat = this.saveBeat.bind(this);
     this.changeBeatSpeed = this.changeBeatSpeed.bind(this);
     this.playBeat = this.playBeat.bind(this);
     this.stopBeat = this.stopBeat.bind(this);
@@ -43,10 +45,20 @@ class App extends React.Component {
     this.playSound = this.playSound.bind(this);
   }
 
-  // saveBeat
-  // clearBeat
-  // changeBeatSpeed
   // loadStoredBeat
+
+  saveBeat(beatName) {
+    let newStoredBeatList = this.state.storedBeatList.slice();
+    let newStoredBeat = {
+      'name' : beatName,
+      'beat' :  this.state.currentBeat
+    };
+    console.log(newStoredBeat);
+    newStoredBeatList.push(newStoredBeat);
+    this.setState({
+      storedBeatList: newStoredBeatList
+    });
+  }
 
   changeBeatSpeed(newSpeed) {
     this.setState({
@@ -127,8 +139,6 @@ class App extends React.Component {
     audioRef.play();
   }
 
-
-
   render () {
     return (
       <div>
@@ -144,6 +154,7 @@ class App extends React.Component {
         `}</style>
         <Header />
         <Settings
+          onSaveBeat={this.saveBeat}
           onPlayBeat={this.playBeat}
           onStopBeat={this.stopBeat}
           onClearBeat={this.clearBeat}

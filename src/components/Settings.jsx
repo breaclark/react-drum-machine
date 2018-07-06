@@ -17,7 +17,7 @@ function Settings(props){
         }
       `}</style>
       <DrumKits />
-      <SaveSettings />
+      <SaveSettings onSaveBeatSave={props.onSaveBeat}/>
       <Play onPlayBeatPlay={props.onPlayBeat}/>
       <Stop onStopBeatStop={props.onStopBeat}/>
       <Clear onClearBeatClear={props.onClearBeat}/>
@@ -33,7 +33,8 @@ Settings.propTypes = {
   onChangeBeatSpeed: PropTypes.func,
   onPlayBeat: PropTypes.func,
   onStopBeat: PropTypes.func,
-  onClearBeat: PropTypes.func
+  onClearBeat: PropTypes.func,
+  onSaveBeat: PropTypes.func
 };
 
 export default Settings;

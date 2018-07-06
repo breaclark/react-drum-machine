@@ -105,7 +105,8 @@ function Beats(props){
 Beats.propTypes = {
   beats: PropTypes.array,
   onBeatsChange: PropTypes.func,
-  onPlaySoundBeats: PropTypes.func
+  onPlaySoundBeats: PropTypes.func,
+  currentlyPlayingBeat: PropTypes.number
 };
 
 export default Beats;

@@ -1,6 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function SaveSettings(){
+function SaveSettings(props){
+
+  let beatName = null;
+  function onSaveClick() {
+    props.onSaveBeatSave(beatName.value);
+  }
+
   return (
     <div className="save-settings">
       <style jsx>{`
@@ -9,6 +16,7 @@ function SaveSettings(){
         }
 
         .save-settings input {
+          color: black;
           font-size: 16px;
           height: 22px;
           margin-top: 8px;
@@ -42,10 +50,14 @@ function SaveSettings(){
 
         }
       `}</style>
-      <input type="text" placeholder="Enter name to save"/>
-      <button>Save</button>
+      <input ref={(input) => {beatName = input;}} type="text" placeholder="Enter name to save"/>
+      <button onClick={onSaveClick}>Save</button>
     </div>
   );
 }
+
+SaveSettings.propTypes = {
+  onSaveBeatSave: PropTypes.func
+};
 
 export default SaveSettings;

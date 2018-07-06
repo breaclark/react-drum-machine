@@ -7,12 +7,12 @@ function BeatNumber(props){
       <style jsx>{`
         .beat-number {
           margin-left: 10px;
+          padding: 0px 9px;
+          width: 14px;
           ${ props.number === props.currentlyPlayingBeat ?
-            `background-color: #149356;
-            border-radius: 4px;
-            padding: 0px 9px;
-            width: 14px;` : ''
-          }
+      `background-color: #149356;
+            border-radius: 4px;` : ''
+    }
         }
 
         @media screen and (max-width: 580px) {

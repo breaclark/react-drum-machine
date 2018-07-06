@@ -26,7 +26,8 @@ SingleBeat.propTypes = {
   beatNumber: PropTypes.number,
   sounds: PropTypes.array,
   onSingleBeatChange: PropTypes.func,
-  onPlaySoundSingleBeat: PropTypes.func
+  onPlaySoundSingleBeat: PropTypes.func,
+  currentlyPlayingBeat: PropTypes.number
 };
 
 export default SingleBeat;
