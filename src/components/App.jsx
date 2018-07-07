@@ -47,7 +47,7 @@ class App extends React.Component {
   }
 
   loadStoredBeat(storedBeat) {
-    let storedBeatCopy = storedBeat.slice();
+    let storedBeatCopy = JSON.parse(JSON.stringify(storedBeat));
     this.setState({
       currentBeat: storedBeatCopy
     });
@@ -129,7 +129,6 @@ class App extends React.Component {
   }
 
   manipulateSoundOnBeat (singleBeat, sound) {
-    console.log(this.state.storedBeatList);
     let newCurrentBeat = this.state.currentBeat.slice();
     if (newCurrentBeat[singleBeat][sound]['on']) {
       newCurrentBeat[singleBeat][sound]['on'] = false;
