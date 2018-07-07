@@ -18,6 +18,7 @@
 * Finding out how to play audio elements with react was difficult and I tried using refs
 * Are you able to make refs and assign them within nested components?
 * I ended up refactoring the way audio elements are played in general and not needing refs
+* It is necessary to do more of a deep copy of arrays of objects. This took me almost an hour to figure out.
 
 ### Differences between Angular and React
 
