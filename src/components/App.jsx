@@ -36,6 +36,7 @@ class App extends React.Component {
       currentSpeed: 180,
       storedBeatList: []
     };
+    this.changeDrumKit = this.changeDrumKit.bind(this);
     this.loadStoredBeat = this.loadStoredBeat.bind(this);
     this.saveBeat = this.saveBeat.bind(this);
     this.changeBeatSpeed = this.changeBeatSpeed.bind(this);
@@ -44,6 +45,17 @@ class App extends React.Component {
     this.clearBeat = this.clearBeat.bind(this);
     this.manipulateSoundOnBeat = this.manipulateSoundOnBeat.bind(this);
     this.playSound = this.playSound.bind(this);
+  }
+
+  changeDrumKit(kit) {
+    switch(kit) {
+      case "B":
+        break;
+      case "C":
+        break;
+      default:
+
+    }
   }
 
   loadStoredBeat(storedBeat) {
@@ -161,6 +173,7 @@ class App extends React.Component {
         `}</style>
         <Header />
         <Settings
+          onChangeKit={this.changeDrumKit}
           onSaveBeat={this.saveBeat}
           onPlayBeat={this.playBeat}
           onStopBeat={this.stopBeat}
