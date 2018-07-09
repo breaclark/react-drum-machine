@@ -7,6 +7,14 @@ import kick from './../assets/kick.mp3';
 import snare from './../assets/snare.mp3';
 import hho from './../assets/high-hat-open.mp3';
 import hhc from './../assets/high-hat-closed.mp3';
+import kickB from './../assets/808-kick.wav';
+import snareB from './../assets/808-snare.wav';
+import hhoB from './../assets/808-high-hat-open.wav';
+import hhcB from './../assets/808-high-hat-closed.wav';
+import kickC from './../assets/Cloudy-kick.wav';
+import snareC from './../assets/Cloudy-snare.wav';
+import hhoC from './../assets/Cloudy-high-hat-open.wav';
+import hhcC from './../assets/Cloudy-high-hat-closed.wav';
 
 class App extends React.Component {
   constructor(props) {
@@ -48,15 +56,36 @@ class App extends React.Component {
   }
 
   changeDrumKit(kit) {
-    console.log(kit);
-    // switch(kit) {
-    // case 'B':
-    //   break;
-    // case 'C':
-    //   break;
-    // default:
-    //
-    // }
+    let currentBeatCopy = JSON.parse(JSON.stringify(this.state.currentBeat));
+    let kitKick = kick;
+    let kitSnare = snare;
+    let kitHHO = hho;
+    let kitHHC = hhc;
+    switch(kit) {
+    case 'B':
+      kitKick = kickB;
+      kitSnare = snareB;
+      kitHHO = hhoB;
+      kitHHC = hhcB;
+      break;
+    case 'C':
+      kitKick = kickC;
+      kitSnare = snareC;
+      kitHHO = hhoC;
+      kitHHC = hhcC;
+      break;
+    default:
+      break;
+    }
+    for (let i=0; i<currentBeatCopy.length; i++) {
+      currentBeatCopy[i][0]['sound'] = kitKick;
+      currentBeatCopy[i][1]['sound'] = kitSnare;
+      currentBeatCopy[i][2]['sound'] = kitHHO;
+      currentBeatCopy[i][3]['sound'] = kitHHC;
+    }
+    this.setState({
+      currentBeat: currentBeatCopy
+    });
   }
 
   loadStoredBeat(storedBeat) {
