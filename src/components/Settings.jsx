@@ -16,7 +16,7 @@ function Settings(props){
           align-items: center;
         }
       `}</style>
-      <DrumKits />
+      <DrumKits onChangeKitDrumKit={props.onChangeKit}/>
       <SaveSettings onSaveBeatSave={props.onSaveBeat}/>
       <Play onPlayBeatPlay={props.onPlayBeat}/>
       <Stop onStopBeatStop={props.onStopBeat}/>
@@ -29,6 +29,7 @@ function Settings(props){
 }
 
 Settings.propTypes = {
+  onChangeKit: PropTypes.func,
   settingsCurrentSpeed: PropTypes.number,
   onChangeBeatSpeed: PropTypes.func,
   onPlayBeat: PropTypes.func,

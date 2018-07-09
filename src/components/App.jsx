@@ -48,14 +48,15 @@ class App extends React.Component {
   }
 
   changeDrumKit(kit) {
-    switch(kit) {
-      case "B":
-        break;
-      case "C":
-        break;
-      default:
-
-    }
+    console.log(kit);
+    // switch(kit) {
+    // case 'B':
+    //   break;
+    // case 'C':
+    //   break;
+    // default:
+    //
+    // }
   }
 
   loadStoredBeat(storedBeat) {

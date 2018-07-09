@@ -2,6 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function SingleKit(props){
+
+  function onClickDrumKit() {
+    props.onChangeSingleDrumKit(props.kitName);
+  }
+
   return (
     <div className="single-kit">
       <style jsx>{`
@@ -21,10 +26,6 @@ function SingleKit(props){
             right: 10px;
           }
 
-          .single-kit p {
-            display: none;
-          }
-
           @media screen and (max-width: 580px) {
             .single-kit {
               height: 20px;
@@ -41,17 +42,14 @@ function SingleKit(props){
             }
           }
       `}</style>
-      <h3>{props.kitName}</h3>
-      {props.sounds.map((soundObject, index) =>
-        <p key={index}>{soundObject}</p>
-      )}
+      <h3 onClick={onClickDrumKit}>{props.kitName}</h3>
     </div>
   );
 }
 
 SingleKit.propTypes = {
-  kitName: PropTypes.string,
-  sounds: PropTypes.array
+  onChangeSingleDrumKit: PropTypes.func,
+  kitName: PropTypes.string
 };
 
 export default SingleKit;

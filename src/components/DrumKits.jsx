@@ -1,34 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SingleKit from './SingleKit';
 
-function DrumKits(){
+function DrumKits(props){
   const kits = [
     {
-      kitName: 'A',
-      sounds: [
-        'kick1.mp3',
-        'snare1.mp3',
-        'hho1.mp3',
-        'hhc1.mp3'
-      ]
+      kitName: 'A'
     },
     {
-      kitName: 'B',
-      sounds: [
-        'kick2.mp3',
-        'snare2.mp3',
-        'hho2.mp3',
-        'hhc2.mp3'
-      ]
+      kitName: 'B'
     },
     {
-      kitName: 'C',
-      sounds: [
-        'kick3.mp3',
-        'snare3.mp3',
-        'hho3.mp3',
-        'hhc3.mp3'
-      ]
+      kitName: 'C'
     }
   ];
 
@@ -59,12 +42,19 @@ function DrumKits(){
       <p>Drum Kit</p>
       <div className="kit-block">
         {kits.map((soundObject, index) =>
-          <SingleKit kitName={soundObject.kitName}
-            sounds={soundObject.sounds}
+          <SingleKit
+            onChangeSingleDrumKit={props.onChangeKitDrumKit}
+            kitName={soundObject.kitName}
             key={index}/>
         )}
       </div>
     </div>
   );
 }
+
+DrumKits.propTypes = {
+  onChangeKitDrumKit: PropTypes.func
+};
+
+
 export default DrumKits;
